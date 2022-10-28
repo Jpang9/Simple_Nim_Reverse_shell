@@ -1,6 +1,7 @@
 import osproc, os
-import winim, system
+import system
 import net, httpclient
+import strenc
 
 var
   inconvene_thy_impression = "127.0.0.1"
